@@ -367,40 +367,62 @@ nav a:hover::before {
 .premium-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 1rem; /* Espaciado entre elementos */
 }
 
 /* Contenedor de la imagen */
 .image-container {
     flex: 1;
     text-align: center;
+    max-width: 100%;
 }
 
 /* Estilo para la cuenta regresiva */
 .countdown-timer {
-    font-size: 1.2rem; /* Tamaño más pequeño para que quepa */
+    font-size: 1.2rem;
     font-weight: bold;
-    background: #007bff;
+    background: #145ca8d6;
     color: #fff;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     text-align: center;
-    margin-left: 20px;
+    min-width: 150px;
 }
 
+/* Ajuste del tamaño del texto del temporizador */
 #countdown {
-    font-size: 1.5rem; /* Ajustamos el tamaño de la cuenta regresiva */
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #0b0404;
 }
 
-/* Asegúrate de que la imagen también se ajuste correctamente */
+/* Estilos de la imagen */
 .image1 {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 200px; /* Limitar el tamaño de la imagen */
+    max-width: 200px;
     height: auto;
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+    .premium-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .countdown-timer {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        min-width: auto;
+        margin-left: 0;
+    }
+
+    #countdown {
+        font-size: 1.2rem;
+    }
+}
